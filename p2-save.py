@@ -18,7 +18,7 @@ env = gym.make("LunarLander-v2" , render_mode="rgb_array")
 
 env.reset()
 
-# model = A2C("MlpPolicy", env, verbose=1)
+# model = A2C("MlpPolicy", env, verbose=1, tensorboard_log=logdir)
 model = PPO("MlpPolicy", env, verbose=1, tensorboard_log=logdir)
 
 TIMESTEPS = 10_000 
